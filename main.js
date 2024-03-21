@@ -6,10 +6,11 @@ window.SpeechRecognition =
 const recognition = new SpeechRecognition();
 recognition.interimResults = true;
 
-let p = document.querySelector(".texts p");
+
 const commands = [];
 
 recognition.addEventListener("result", (e) => {
+  let p = document.querySelector(".texts p");
   const text = Array.from(e.results)
     .map((result) => result[0])
     .map((result) => result.transcript)
@@ -17,7 +18,7 @@ recognition.addEventListener("result", (e) => {
     console.log(text);
     p.innerText = text;
   if (e.results[0].isFinal) {
-    console.log("Aba Ewan",text)
+    console.log("Aba Ewan",text);
     p.innerText = text;
     commands.push(text);
     if (text.includes("give me the array")) {
@@ -47,6 +48,7 @@ recognition.addEventListener("result", (e) => {
 
 recognition.addEventListener("end", () => {
   recognition.start();
+  p.innerText = text;
 });
 
 recognition.start();
