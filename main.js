@@ -6,22 +6,22 @@ window.SpeechRecognition =
 const recognition = new SpeechRecognition();
 recognition.interimResults = true;
 
-let p = document.createElement("p");
+let p = document.querySelector(".texts p");
+const commands = [];
 
 recognition.addEventListener("result", (e) => {
-  texts.appendChild(p);
   const text = Array.from(e.results)
     .map((result) => result[0])
     .map((result) => result.transcript)
-    .join("");
+    .join("").toLowerCase();
 
   p.innerText = text;
   if (e.results[0].isFinal) {
-    if (text.includes("how are you")) {
-      p = document.createElement("p");
-      p.classList.add("replay");
+    p.innerText = text;
+    commands.push(text);
+    if (text.includes("give me the array")) {
+        console.log(commands)
       p.innerText = "I am fine";
-      texts.appendChild(p);
     }
     if (
       text.includes("what's your name") ||
@@ -32,13 +32,13 @@ recognition.addEventListener("result", (e) => {
       p.innerText = "My Name is Cifar";
       texts.appendChild(p);
     }
-    if (text.includes("open my YouTube")) {
+    if (text.includes("open my youtube")) {
       p = document.createElement("p");
       p.classList.add("replay");
       p.innerText = "opening youtube channel";
       texts.appendChild(p);
       console.log("opening youtube");
-      window.open("https://www.youtube.com/channel/UCdxaLo9ALJgXgOUDURRPGiQ");
+      window.open("https://www.youtube.com");
     }
     p = document.createElement("p");
   }
