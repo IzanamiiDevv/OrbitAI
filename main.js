@@ -48,7 +48,6 @@ recognition.addEventListener("result", (e) => {
 
 recognition.addEventListener("end", () => {
   recognition.start();
-  p.innerText = text;
 });
 
 recognition.start();
