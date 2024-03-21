@@ -6,6 +6,7 @@ window.SpeechRecognition =
 const recognition = new SpeechRecognition();
 recognition.interimResults = true;
 
+let p = document.querySelector(".texts p");
 
 const commands = [];
 
