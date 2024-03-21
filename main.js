@@ -14,9 +14,10 @@ recognition.addEventListener("result", (e) => {
     .map((result) => result[0])
     .map((result) => result.transcript)
     .join("").toLowerCase();
-
-  p.innerText = text;
+    console.log(text);
+    p.innerText = text;
   if (e.results[0].isFinal) {
+    console.log("Aba Ewan",text)
     p.innerText = text;
     commands.push(text);
     if (text.includes("give me the array")) {
