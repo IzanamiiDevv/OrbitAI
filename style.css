@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   html {
-    font-family: "Montserrat";
+    font-family:Arial, Helvetica, sans-serif;
     font-size: 20px;
   }
   section {
@@ -35,7 +35,7 @@
     margin: 0 auto;
     justify-content: center;
   }
-  .texts p {
+  .texts p, .container {
     color: black;
     text-align: left;
     width: 100%;
