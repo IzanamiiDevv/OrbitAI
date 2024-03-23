@@ -23,7 +23,7 @@
     font-size: 50px;
     margin-bottom: 10px;
   }
-  section p {
+  section #status{
     text-align: center;
     color: rgba(255, 255, 255, 0.322);
     width: 100%;
@@ -44,7 +44,24 @@
     border-radius: 8px;
     margin-bottom: 10px;
   }
-  .texts p.replay {
+  #response {
     text-align: right;
   }
   
+.identity {
+  color: rgb(201, 194, 194);
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.page {
+  position: relative;
+  height: 100vh;
+}
+
+
+#web{
+  padding: 0;
+  display: block;
+  background-color: black;
+}
