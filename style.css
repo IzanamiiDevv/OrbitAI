@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color:azure;
+    background-color: rgb(15, 15, 15);
+}
+
+section h1 {
+    color: rgb(0, 75, 146);
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#h1-span{
+    color:rgb(110, 15, 165);
+}
