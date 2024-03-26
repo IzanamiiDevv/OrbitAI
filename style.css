@@ -10,13 +10,58 @@ body {
 }
 
 section h1 {
-    color: rgb(0, 75, 146);
     text-align: center;
     width: 100%;
     font-size: 50px;
     margin-bottom: 10px;
 }
 
-#h1-span{
-    color:rgb(110, 15, 165);
+section #status{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.322);
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+}
+
+section h1:hover {
+    text-shadow: 0 0 5px #6103a0,
+    0 0 20px #6103a0,
+    0 0 60px #6103a0,
+    0 0 150px #6103a0;
+}
+
+.galax {
+    background: linear-gradient(45deg, #6103a0, #2f94d8);
+    color: transparent;
+    background-clip: text;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.texts p, .container {
+    color: black;
+    text-align: left;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#response {
+    text-align: right;
+}
+
+.dist {
+    position: relative;
+    text-align: center;
+}
+
+#user {
+    left: 25%;
 }
